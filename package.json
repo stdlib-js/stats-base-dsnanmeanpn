@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/stats-base-dsnanmeanpn",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Calculate the arithmetic mean of a single-precision floating-point strided array, ignoring NaN values, using a two-pass error correction algorithm with extended accumulation, and returning an extended precision result.",
   "license": "Apache-2.0",
   "author": {
@@ -41,10 +41,10 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/assert-is-error": "^0.1.1",
-    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.1.1",
-    "@stdlib/utils-library-manifest": "^0.1.1",
-    "@stdlib/utils-try-require": "^0.1.1"
+    "@stdlib/assert-is-error": "^0.2.0",
+    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.0",
+    "@stdlib/utils-library-manifest": "^0.2.0",
+    "@stdlib/utils-try-require": "^0.2.0"
   },
   "devDependencies": {
     "@stdlib/array-float32": "^0.1.1",
