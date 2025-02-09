@@ -56,32 +56,14 @@ The [arithmetic mean][arithmetic-mean] is defined as
 
 <!-- /.intro -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/stats-base-dsnanmeanpn
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var dsnanmeanpn = require( '@stdlib/stats-base-dsnanmeanpn' );
+import dsnanmeanpn from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dsnanmeanpn@esm/index.mjs';
 ```
 
 #### dsnanmeanpn( N, x, strideX )
@@ -89,7 +71,7 @@ var dsnanmeanpn = require( '@stdlib/stats-base-dsnanmeanpn' );
 Computes the [arithmetic mean][arithmetic-mean] of a single-precision floating-point strided array `x`, ignoring `NaN` values, using a two-pass error correction algorithm with extended accumulation, and returning an extended precision result.
 
 ```javascript
-var Float32Array = require( '@stdlib/array-float32' );
+import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@esm/index.mjs';
 
 var x = new Float32Array( [ 1.0, -2.0, NaN, 2.0 ] );
 
@@ -108,7 +90,7 @@ The `N` and stride parameters determine which elements in `x` are accessed at ru
 <!-- eslint-disable max-len -->
 
 ```javascript
-var Float32Array = require( '@stdlib/array-float32' );
+import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@esm/index.mjs';
 
 var x = new Float32Array( [ 1.0, 2.0, 2.0, -7.0, -2.0, 3.0, 4.0, 2.0, NaN, NaN ] );
 
@@ -121,7 +103,7 @@ Note that indexing is relative to the first index. To introduce an offset, use [
 <!-- eslint-disable stdlib/capitalized-comments, max-len -->
 
 ```javascript
-var Float32Array = require( '@stdlib/array-float32' );
+import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@esm/index.mjs';
 
 var x0 = new Float32Array( [ 2.0, 1.0, 2.0, -2.0, -2.0, 2.0, 3.0, 4.0, NaN, NaN ] );
 var x1 = new Float32Array( x0.buffer, x0.BYTES_PER_ELEMENT*1 ); // start at 2nd element
@@ -135,7 +117,7 @@ var v = dsnanmeanpn( 5, x1, 2 );
 Computes the [arithmetic mean][arithmetic-mean] of a single-precision floating-point strided array, ignoring `NaN` values and using a two-pass error correction algorithm with extended accumulation and alternative indexing semantics.
 
 ```javascript
-var Float32Array = require( '@stdlib/array-float32' );
+import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@esm/index.mjs';
 
 var x = new Float32Array( [ 1.0, -2.0, NaN, 2.0 ] );
 
@@ -152,7 +134,7 @@ While [`typed array`][mdn-typed-array] views mandate a view offset based on the 
 <!-- eslint-disable max-len -->
 
 ```javascript
-var Float32Array = require( '@stdlib/array-float32' );
+import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@esm/index.mjs';
 
 var x = new Float32Array( [ 2.0, 1.0, 2.0, -2.0, -2.0, 2.0, 3.0, 4.0, NaN, NaN ] );
 
@@ -182,11 +164,16 @@ var v = dsnanmeanpn.ndarray( 5, x, 2, 1 );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var randu = require( '@stdlib/random-base-randu' );
-var round = require( '@stdlib/math-base-special-round' );
-var Float32Array = require( '@stdlib/array-float32' );
-var dsnanmeanpn = require( '@stdlib/stats-base-dsnanmeanpn' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="module">
+
+import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
+import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@esm/index.mjs';
+import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@esm/index.mjs';
+import dsnanmeanpn from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dsnanmeanpn@esm/index.mjs';
 
 var x;
 var i;
@@ -203,6 +190,10 @@ console.log( x );
 
 var v = dsnanmeanpn( x.length, x, 1 );
 console.log( v );
+
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -351,7 +342,7 @@ int main( void ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -416,7 +407,7 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [arithmetic-mean]: https://en.wikipedia.org/wiki/Arithmetic_mean
 
-[@stdlib/array/float32]: https://github.com/stdlib-js/array-float32
+[@stdlib/array/float32]: https://github.com/stdlib-js/array-float32/tree/esm
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
@@ -426,17 +417,17 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/stats/base/dnanmeanpn]: https://github.com/stdlib-js/stats-base-dnanmeanpn
+[@stdlib/stats/base/dnanmeanpn]: https://github.com/stdlib-js/stats-base-dnanmeanpn/tree/esm
 
-[@stdlib/stats/base/dsmeanpn]: https://github.com/stdlib-js/stats-base-dsmeanpn
+[@stdlib/stats/base/dsmeanpn]: https://github.com/stdlib-js/stats-base-dsmeanpn/tree/esm
 
-[@stdlib/stats/base/dsnanmean]: https://github.com/stdlib-js/stats-base-dsnanmean
+[@stdlib/stats/base/dsnanmean]: https://github.com/stdlib-js/stats-base-dsnanmean/tree/esm
 
-[@stdlib/stats/base/nanmeanpn]: https://github.com/stdlib-js/stats-base-nanmeanpn
+[@stdlib/stats/base/nanmeanpn]: https://github.com/stdlib-js/stats-base-nanmeanpn/tree/esm
 
-[@stdlib/stats/base/sdsnanmean]: https://github.com/stdlib-js/stats-base-sdsnanmean
+[@stdlib/stats/base/sdsnanmean]: https://github.com/stdlib-js/stats-base-sdsnanmean/tree/esm
 
-[@stdlib/stats/base/snanmeanpn]: https://github.com/stdlib-js/stats-base-snanmeanpn
+[@stdlib/stats/base/snanmeanpn]: https://github.com/stdlib-js/stats-base-snanmeanpn/tree/esm
 
 <!-- </related-links> -->
 
