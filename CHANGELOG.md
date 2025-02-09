@@ -4,7 +4,17 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2024-12-30)
+## Unreleased (2025-02-09)
+
+<section class="features">
+
+### Features
+
+-   [`f51730c`](https://github.com/stdlib-js/stdlib/commit/f51730c2f7cf8edf63bfa093efd20fa465fe00cd) - add C `ndarray` interface and refactor implementation for `stats/base/dsnanmeanpn` [(#4405)](https://github.com/stdlib-js/stdlib/pull/4405)
+
+</section>
+
+<!-- /.features -->
 
 <section class="commits">
 
@@ -12,6 +22,8 @@
 
 <details>
 
+-   [`f51730c`](https://github.com/stdlib-js/stdlib/commit/f51730c2f7cf8edf63bfa093efd20fa465fe00cd) - **feat:** add C `ndarray` interface and refactor implementation for `stats/base/dsnanmeanpn` [(#4405)](https://github.com/stdlib-js/stdlib/pull/4405) _(by Neeraj Pathak, Athan Reines)_
+-   [`fb70c55`](https://github.com/stdlib-js/stdlib/commit/fb70c5590dd5464afa41038d7392bab533203c0f) - **refactor:** update `stats/base/dsnanmeanpn` native addon from C++ to C [(#4866)](https://github.com/stdlib-js/stdlib/pull/4866) _(by Prashant Kumar Yadav)_
 -   [`62364f6`](https://github.com/stdlib-js/stdlib/commit/62364f62ea823a3b52c2ad25660ecd80c71f8f36) - **style:** fix C comment alignment _(by Philipp Burckhardt)_
 -   [`9e689ff`](https://github.com/stdlib-js/stdlib/commit/9e689ffcb7c6223afc521f1e574b42f10921cf5e) - **chore:** fix indentation in manifest.json files _(by Philipp Burckhardt)_
 -   [`272ae7a`](https://github.com/stdlib-js/stdlib/commit/272ae7ac5c576c68cfab1b6e304c86407faa20cd) - **docs:** remove comment _(by Athan Reines)_
@@ -27,10 +39,12 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 4 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
+-   Neeraj Pathak
 -   Philipp Burckhardt
+-   Prashant Kumar Yadav
 
 </section>
 
